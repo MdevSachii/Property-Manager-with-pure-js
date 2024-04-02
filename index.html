@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estate Agent Client-side Web Application</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Add your CSS styles here */
+        #dataDisplay {
+            margin-top: 20px;
+        }
+
+        .property {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .property img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="button-wishlist" role="button" id="displayWishlistButton">Wish List</button>
+    <form id="propertySearchForm">
+        <fieldset>
+            <legend>Basic Search</legend>
+            <div class="flex-container">
+                <div>
+                    <label for="propertyType">Type:</label>
+                    <select id="propertyType" name="propertyType">
+                        <option value="" disabled selected>Select property type</option>
+                        <option value="house">House</option>
+                        <option value="flat">Flat</option>
+                        <option value="any">Any</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="postcode">Postcode Area:</label>
+                    <input type="text" id="postcode" name="postcode" placeholder="Enter postcode area">
+                </div>
+                <div>
+                    <label for="bedrooms">Bedrooms:</label>
+                    <input type="number" id="bedrooms" name="bedrooms" min="0">
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Button to toggle the advanced search section -->
+        <button type="button" id="toggleAdvancedSearch">Show Advanced Search</button>
+
+        <!-- Advanced search section -->
+        <div class="advanceSearch" id="advancedSearchSection">
+            <fieldset>
+                <legend>Advanced Search</legend>
+                <div class="flex-container">
+                    <div>
+                        <label for="price">Price (£):</label>
+                        <input type="number" id="price" name="price" min="0">
+                    </div>
+                    <div>
+                        <label for="addedDate">Added After Date:</label>
+                        <input type="date" id="addedDate" name="addedDate">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <input type="submit" value="Search">
+        <span id="typeError" class="error"></span>
+        <span id="postcodeError" class="error"></span>
+        <span id="bedroomsError" class="error"></span>
+    </form>
+
+    <div id="dataDisplay"></div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

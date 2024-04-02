@@ -1,0 +1,202 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    /* Adjust as needed */
+    align-items: center;
+    /* Adjust as needed */
+}
+
+.flex-container>div {
+    flex: 1;
+    margin-right: 10px;
+    /* Adjust spacing between elements */
+}
+
+
+/* CSS */
+.button-wishlist {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-wishlist:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-wishlist:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-wishlist:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-wishlist:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-wishlist {
+    padding: 0 40px;
+  }
+}
+
+form {
+    max-width: 1500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    flex-wrap: wrap;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+    flex: 1 1 45%;
+    /* Adjust the width of fieldset as per requirement */
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: calc(100% - 22px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.error {
+    color: red;
+    margin-top: 5px;
+}
+
+/* Hide the advanced search section by default */
+#advancedSearchSection {
+    display: none;
+}
+
+/* Adjust styles for the advanced search button */
+#toggleAdvancedSearch {
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+a {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 75%;
+    font-size: 18px;
+    text-decoration: none;
+    bottom: 0;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.row{
+    /* position: relative;   */
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+/* @media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+} */
